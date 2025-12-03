@@ -299,7 +299,7 @@ export default function Home() {
         </div>
 
         <div className="instantly-container text-center relative z-10">
-          <h2 className="text-white mb-6">
+          <h2 className="text-white-heading mb-6">
             Equal Opportunity, Maximum Flexibility
           </h2>
           <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
