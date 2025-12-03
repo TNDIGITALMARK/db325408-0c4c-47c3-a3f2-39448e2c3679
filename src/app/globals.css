@@ -264,16 +264,56 @@ button {
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 
+.shadow-lg {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.shadow-xl {
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
 /* Feature card shadow matching design */
 .instantly-card-shadow {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+}
+
+.instantly-card-shadow:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 /* Button hover shadow for orange CTA */
+.instantly-button-hover {
+  transition: all 0.3s ease;
+}
+
 .instantly-button-hover:hover {
   box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
   transform: translateY(-2px);
-  transition: all 0.3s ease;
+}
+
+/* Image container effects */
+.instantly-image-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+/* Gradient overlays */
+.instantly-gradient-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.instantly-gradient-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(26, 58, 92, 0.05) 0%, rgba(255, 107, 53, 0.05) 100%);
+  pointer-events: none;
 }
 
 /* === INSTANTLY INC. UTILITY CLASSES === */

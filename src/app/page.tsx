@@ -4,6 +4,7 @@ import { FeatureCard } from "@/components/instantly/feature-card";
 import { MobileMockup } from "@/components/instantly/mobile-mockup";
 import { Camera, Truck, Smartphone } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export const dynamic = 'force-dynamic';
 
@@ -13,8 +14,12 @@ export default function Home() {
       <Header />
 
       {/* Hero Section */}
-      <section className="bg-white py-20">
-        <div className="instantly-container">
+      <section className="bg-white py-20 relative overflow-hidden">
+        {/* Decorative circles */}
+        <div className="absolute top-20 right-10 w-64 h-64 bg-[hsl(var(--instantly-feature-blue))] rounded-full opacity-20 blur-3xl"></div>
+        <div className="absolute bottom-20 left-10 w-48 h-48 bg-[hsl(var(--instantly-feature-green))] rounded-full opacity-20 blur-3xl"></div>
+
+        <div className="instantly-container relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left: Hero Text */}
             <div>
@@ -72,23 +77,35 @@ export default function Home() {
             </div>
 
             {/* Right: Hero Image */}
-            <div className="relative">
-              <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-2xl p-8 instantly-card-shadow">
-                <div className="grid grid-cols-2 gap-4">
-                  {/* Placeholder for diverse service providers */}
-                  <div className="bg-[hsl(var(--instantly-navy))] rounded-xl aspect-square flex items-center justify-center text-white text-sm font-semibold p-4 text-center">
-                    Handy Services
-                  </div>
-                  <div className="bg-[hsl(var(--instantly-orange))] rounded-xl aspect-square flex items-center justify-center text-white text-sm font-semibold p-4 text-center">
-                    Food Delivery
-                  </div>
-                  <div className="bg-[hsl(var(--instantly-feature-blue))] rounded-xl aspect-square flex items-center justify-center text-[hsl(var(--instantly-text-dark))] text-sm font-semibold p-4 text-center border-2 border-[hsl(var(--instantly-navy))]">
-                    Tech Support
-                  </div>
-                  <div className="bg-[hsl(var(--instantly-feature-green))] rounded-xl aspect-square flex items-center justify-center text-[hsl(var(--instantly-text-dark))] text-sm font-semibold p-4 text-center border-2 border-[hsl(var(--instantly-navy))]">
-                    Moving Services
-                  </div>
-                </div>
+            <div className="relative instantly-image-float">
+              <div className="instantly-gradient-overlay rounded-2xl overflow-hidden instantly-card-shadow">
+                <Image
+                  src="/generated/hero-providers.png"
+                  alt="Diverse group of independent service providers"
+                  width={1200}
+                  height={675}
+                  className="w-full h-auto"
+                  priority
+                />
+              </div>
+              {/* Floating service icons */}
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-white rounded-2xl shadow-lg p-4 instantly-card-shadow">
+                <Image
+                  src="/generated/service-handy.png"
+                  alt="Handyman services"
+                  width={96}
+                  height={96}
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-white rounded-2xl shadow-lg p-4 instantly-card-shadow">
+                <Image
+                  src="/generated/service-food.png"
+                  alt="Food delivery services"
+                  width={96}
+                  height={96}
+                  className="w-full h-full object-contain"
+                />
               </div>
             </div>
           </div>
@@ -96,7 +113,19 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="bg-[hsl(var(--instantly-bg-light))] py-20">
+      <section className="bg-[hsl(var(--instantly-bg-light))] py-20 relative">
+        {/* Section Header */}
+        <div className="instantly-container mb-12">
+          <div className="text-center max-w-3xl mx-auto">
+            <h2 className="text-[hsl(var(--instantly-text-dark))] mb-4">
+              Everything You Need to Succeed
+            </h2>
+            <p className="text-lg text-[hsl(var(--instantly-text-muted))] leading-relaxed">
+              Our platform provides all the tools and support to help you thrive as an independent service provider
+            </p>
+          </div>
+        </div>
+
         <div className="instantly-container">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <FeatureCard
@@ -104,26 +133,39 @@ export default function Home() {
               title="Live Stream Services"
               description="Showcase your skills in real-time. Connect with customers through live streaming and build your personal brand while earning."
               bgColor="blue"
+              image="/generated/live-streaming-service.png"
             />
             <FeatureCard
               icon={<Truck className="text-[hsl(var(--instantly-navy))]" size={32} />}
               title="Instant Delivery"
               description="Accept local delivery jobs on your terms. Track deliveries in real-time and earn with complete flexibility."
               bgColor="green"
+              image="/generated/delivery-service.png"
             />
             <FeatureCard
               icon={<Smartphone className="text-[hsl(var(--instantly-navy))]" size={32} />}
               title="Community Mobile Apps"
               description="Manage everything on the go. Available on Google Play and the App Store with seamless cross-platform experience."
-              bgColor="green"
+              bgColor="blue"
+              image="/generated/mobile-app-showcase.png"
             />
           </div>
         </div>
       </section>
 
       {/* Join Network Section */}
-      <section className="bg-white py-20">
-        <div className="instantly-container">
+      <section className="bg-white py-20 relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <Image
+            src="/generated/pattern-background.png"
+            alt=""
+            fill
+            className="object-cover"
+          />
+        </div>
+
+        <div className="instantly-container relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left: Text */}
             <div>
@@ -174,17 +216,89 @@ export default function Home() {
               </Link>
             </div>
 
-            {/* Right: Mobile Mockup */}
-            <div className="flex justify-center">
-              <MobileMockup />
+            {/* Right: Community Image */}
+            <div className="relative">
+              <div className="rounded-2xl overflow-hidden instantly-card-shadow">
+                <Image
+                  src="/generated/community-providers.png"
+                  alt="Community of service providers"
+                  width={800}
+                  height={600}
+                  className="w-full h-auto"
+                />
+              </div>
+              {/* Floating accent */}
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[hsl(var(--instantly-orange))] rounded-full opacity-20 blur-3xl"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="bg-gradient-to-br from-[hsl(var(--instantly-feature-blue))] to-[hsl(var(--instantly-feature-green))] py-20">
+        <div className="instantly-container">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Stat 1 */}
+            <div className="bg-white rounded-2xl p-8 instantly-card-shadow text-center">
+              <div className="w-20 h-20 mx-auto mb-4 relative">
+                <Image
+                  src="/generated/success-metrics.png"
+                  alt="Success metrics"
+                  width={80}
+                  height={80}
+                  className="object-contain"
+                />
+              </div>
+              <div className="text-4xl font-bold text-[hsl(var(--instantly-navy))] mb-2">10,000+</div>
+              <div className="text-[hsl(var(--instantly-text-muted))] font-semibold">Active Providers</div>
+            </div>
+
+            {/* Stat 2 */}
+            <div className="bg-white rounded-2xl p-8 instantly-card-shadow text-center">
+              <div className="w-20 h-20 mx-auto mb-4 relative">
+                <Image
+                  src="/generated/instant-earnings.png"
+                  alt="Instant earnings"
+                  width={80}
+                  height={80}
+                  className="object-contain"
+                />
+              </div>
+              <div className="text-4xl font-bold text-[hsl(var(--instantly-orange))] mb-2">$5M+</div>
+              <div className="text-[hsl(var(--instantly-text-muted))] font-semibold">Earnings Paid Out</div>
+            </div>
+
+            {/* Stat 3 */}
+            <div className="bg-white rounded-2xl p-8 instantly-card-shadow text-center">
+              <div className="w-20 h-20 mx-auto mb-4 relative">
+                <Image
+                  src="/generated/service-tech.png"
+                  alt="Services completed"
+                  width={80}
+                  height={80}
+                  className="object-contain"
+                />
+              </div>
+              <div className="text-4xl font-bold text-[hsl(var(--instantly-navy))] mb-2">50,000+</div>
+              <div className="text-[hsl(var(--instantly-text-muted))] font-semibold">Services Completed</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Mission Statement */}
-      <section className="bg-[hsl(var(--instantly-navy))] text-white py-20">
-        <div className="instantly-container text-center">
+      <section className="bg-[hsl(var(--instantly-navy))] text-white py-20 relative overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute inset-0 opacity-10">
+          <Image
+            src="/generated/pattern-background.png"
+            alt=""
+            fill
+            className="object-cover"
+          />
+        </div>
+
+        <div className="instantly-container text-center relative z-10">
           <h2 className="text-white mb-6">
             Equal Opportunity, Maximum Flexibility
           </h2>

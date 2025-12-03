@@ -4,6 +4,7 @@ import { Header } from "@/components/instantly/header";
 import { Footer } from "@/components/instantly/footer";
 import { Search, MapPin, Star, Clock, Video, MessageCircle } from "lucide-react";
 import { useState } from "react";
+import Image from "next/image";
 
 const serviceProviders = [
   {
@@ -77,14 +78,24 @@ export default function ServicesPage() {
   });
 
   return (
-    <div className="min-h-screen flex flex-col bg-[hsl(var(--instantly-bg-light))]">
+    <div className="min-h-screen flex flex-col bg-[hsl(var(--instantly-bg-light))] relative">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-3">
+        <Image
+          src="/generated/pattern-background.png"
+          alt=""
+          fill
+          className="object-cover"
+        />
+      </div>
+
       <Header />
 
-      <div className="instantly-container py-8">
+      <div className="instantly-container py-8 relative z-10">
         {/* Page Header */}
-        <div className="mb-8">
+        <div className="mb-8 text-center">
           <h1 className="text-[hsl(var(--instantly-text-dark))] mb-2">Find Service Providers</h1>
-          <p className="text-[hsl(var(--instantly-text-muted))]">
+          <p className="text-[hsl(var(--instantly-text-muted))] max-w-2xl mx-auto">
             Connect with verified local providers for live streaming services and instant delivery
           </p>
         </div>
