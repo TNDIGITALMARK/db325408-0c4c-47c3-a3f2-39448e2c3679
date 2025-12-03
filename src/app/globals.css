@@ -1,59 +1,69 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* ============================================
+   INSTANTLY INC. DESIGN SYSTEM
+   Empowering Independent Service Providers
+   ============================================ */
 
 :root {
-  /* Pure white background with crisp black text */
-  --background: 0 0% 100%;
-  --foreground: 0 0% 0%;
+  /* === INSTANTLY INC. BRAND COLORS === */
+  --instantly-navy: 210 65% 22%;        /* #1a3a5c - Primary navy blue */
+  --instantly-orange: 16 100% 60%;      /* #ff6b35 - Call-to-action orange */
+  --instantly-bg-light: 0 0% 96%;       /* #f5f5f5 - Light gray background */
+  --instantly-white: 0 0% 100%;         /* #ffffff - Pure white */
+  --instantly-text-dark: 210 65% 22%;   /* #1a3a5c - Dark text */
+  --instantly-feature-blue: 184 40% 94%;/* #e8f4f8 - Light blue tint */
+  --instantly-feature-green: 125 30% 94%;/* #e8f5e9 - Light green tint */
+  --instantly-text-muted: 210 15% 45%;  /* Muted text color */
 
-  /* Clean white cards with black text */
-  --card: 0 0% 100%;
-  --card-foreground: 0 0% 0%;
+  /* === SHADCN UI THEME MAPPING === */
+  --background: var(--instantly-bg-light);
+  --foreground: var(--instantly-text-dark);
 
-  /* Popovers with white background */
-  --popover: 0 0% 100%;
-  --popover-foreground: 0 0% 0%;
+  --card: var(--instantly-white);
+  --card-foreground: var(--instantly-text-dark);
 
-  /* Primary: Black with white text */
-  --primary: 0 0% 0%;
-  --primary-foreground: 0 0% 100%;
+  --popover: var(--instantly-white);
+  --popover-foreground: var(--instantly-text-dark);
 
-  /* Secondary: Light gray background with black text */
-  --secondary: 0 0% 97%;
-  --secondary-foreground: 0 0% 0%;
+  /* Primary: Instantly Navy */
+  --primary: var(--instantly-navy);
+  --primary-foreground: var(--instantly-white);
 
-  /* Muted: Subtle gray with darker text */
-  --muted: 0 0% 96%;
-  --muted-foreground: 0 0% 40%;
+  /* Secondary: Instantly Orange */
+  --secondary: var(--instantly-orange);
+  --secondary-foreground: var(--instantly-white);
 
-  /* Accent: Light gray */
-  --accent: 0 0% 96%;
-  --accent-foreground: 0 0% 0%;
+  /* Muted backgrounds */
+  --muted: var(--instantly-bg-light);
+  --muted-foreground: var(--instantly-text-muted);
+
+  /* Accent: Feature card colors */
+  --accent: var(--instantly-feature-blue);
+  --accent-foreground: var(--instantly-text-dark);
 
   /* Destructive: Clean red */
   --destructive: 0 70% 50%;
-  --destructive-foreground: 0 0% 100%;
+  --destructive-foreground: var(--instantly-white);
 
-  /* Borders: Subtle gray */
-  --border: 0 0% 90%;
-  --input: 0 0% 90%;
-  --ring: 0 0% 0%;
+  /* Borders */
+  --border: 210 20% 88%;
+  --input: 210 20% 88%;
+  --ring: var(--instantly-navy);
 
-  /* Minimal rounded corners */
-  --radius: 0.375rem;
+  /* Border radius matching design */
+  --radius: 0.75rem;  /* 12px for cards */
 
-  /* Sidebar: Clean white with black text */
-  --sidebar-background: 0 0% 100%;
-  --sidebar-foreground: 0 0% 0%;
-  --sidebar-primary: 0 0% 0%;
-  --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 0 0% 96%;
-  --sidebar-accent-foreground: 0 0% 0%;
-  --sidebar-border: 0 0% 90%;
-  --sidebar-ring: 0 0% 0%;
+  /* Sidebar colors */
+  --sidebar-background: var(--instantly-navy);
+  --sidebar-foreground: var(--instantly-white);
+  --sidebar-primary: var(--instantly-orange);
+  --sidebar-primary-foreground: var(--instantly-white);
+  --sidebar-accent: 210 65% 28%;
+  --sidebar-accent-foreground: var(--instantly-white);
+  --sidebar-border: 210 65% 28%;
+  --sidebar-ring: var(--instantly-orange);
 }
 
 .dark {
@@ -168,28 +178,80 @@ All colors MUST be HSL.
   border-color: hsl(var(--border));
 }
 
+/* === TYPOGRAPHY SYSTEM === */
+html {
+  font-size: 16px;
+}
+
 body {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
   font-feature-settings: "rlig" 1, "calt" 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
 
-/* Minimal, clean typography */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
-  letter-spacing: -0.025em;
-  color: hsl(var(--foreground));
+/* Instantly Inc. Typography Scale */
+h1 {
+  font-size: 3.375rem;  /* 54px */
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: hsl(var(--instantly-text-dark));
 }
 
-/* Clean button styles */
-button {
+h2 {
+  font-size: 2.25rem;  /* 36px */
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  color: hsl(var(--instantly-text-dark));
+}
+
+h3 {
+  font-size: 1.25rem;  /* 20px */
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: hsl(var(--instantly-text-dark));
+}
+
+h4 {
+  font-size: 1.125rem;  /* 18px */
+  font-weight: 600;
+  line-height: 1.4;
+  color: hsl(var(--instantly-text-dark));
+}
+
+h5, h6 {
+  font-size: 1rem;  /* 16px */
+  font-weight: 600;
+  line-height: 1.5;
+  color: hsl(var(--instantly-text-dark));
+}
+
+p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* Navigation typography */
+nav a {
+  font-size: 0.9375rem;  /* 15px */
   font-weight: 500;
 }
 
-/* Subtle shadows for depth */
+/* Button typography */
+button {
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+}
+
+/* === INSTANTLY INC. SHADOWS === */
 .shadow-sm {
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
 }
@@ -200,4 +262,37 @@ button {
 
 .shadow-md {
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+/* Feature card shadow matching design */
+.instantly-card-shadow {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Button hover shadow for orange CTA */
+.instantly-button-hover:hover {
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+/* === INSTANTLY INC. UTILITY CLASSES === */
+.instantly-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.25rem;  /* 36px on mobile */
+  }
+
+  h2 {
+    font-size: 1.75rem;  /* 28px on mobile */
+  }
+
+  .instantly-container {
+    padding: 0 1rem;
+  }
 }
