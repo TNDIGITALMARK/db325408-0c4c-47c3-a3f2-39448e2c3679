@@ -209,7 +209,7 @@ h2 {
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.015em;
-  color: hsl(var(--instantly-text-dark));
+  color: #ffffff;
 }
 
 h3 {
