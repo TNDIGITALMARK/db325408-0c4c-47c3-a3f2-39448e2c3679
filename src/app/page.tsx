@@ -23,7 +23,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left: Hero Text */}
             <div>
-              <h1 className="text-[hsl(var(--instantly-text-dark))] text-white-heading mb-6">
+              <h1 className="text-[hsl(var(--instantly-navy))] mb-6">
                 Empowering Independent Service Providers
               </h1>
               <p className="text-lg text-[hsl(var(--instantly-text-muted))] mb-8 leading-relaxed">

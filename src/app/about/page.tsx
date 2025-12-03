@@ -10,7 +10,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="bg-[hsl(var(--instantly-navy))] text-white py-20">
         <div className="instantly-container text-center">
-          <h1 className="text-white mb-6">About Instantly Inc.</h1>
+          <h1 className="text-white-heading mb-6">About Instantly Inc.</h1>
           <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
             Empowering independent service providers through technology, community, and instant opportunities
           </p>
