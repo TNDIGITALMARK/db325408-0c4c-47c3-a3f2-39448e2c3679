@@ -20,21 +20,30 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-6">
             <Link href="/" className="hover:text-[hsl(var(--instantly-orange))] transition-colors">
               Home
             </Link>
-            <Link href="/about" className="hover:text-[hsl(var(--instantly-orange))] transition-colors">
-              About Us
-            </Link>
-            <Link href="/apply" className="hover:text-[hsl(var(--instantly-orange))] transition-colors">
-              Apply
+            <Link href="/services" className="hover:text-[hsl(var(--instantly-orange))] transition-colors">
+              Find Services
             </Link>
             <Link href="/live-streaming" className="hover:text-[hsl(var(--instantly-orange))] transition-colors">
-              Live Streaming
+              Live Streams
             </Link>
-            <Link href="/contact" className="hover:text-[hsl(var(--instantly-orange))] transition-colors">
-              Contact
+            <Link href="/community" className="hover:text-[hsl(var(--instantly-orange))] transition-colors">
+              Community
+            </Link>
+            <Link href="/dashboard" className="hover:text-[hsl(var(--instantly-orange))] transition-colors">
+              Dashboard
+            </Link>
+            <Link href="/about" className="hover:text-[hsl(var(--instantly-orange))] transition-colors">
+              About
+            </Link>
+            <Link
+              href="/apply"
+              className="bg-[hsl(var(--instantly-orange))] text-white px-4 py-2 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+            >
+              Apply Now
             </Link>
           </nav>
 
@@ -61,32 +70,46 @@ export function Header() {
               Home
             </Link>
             <Link
-              href="/about"
+              href="/services"
               className="py-2 hover:text-[hsl(var(--instantly-orange))] transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
-              About Us
-            </Link>
-            <Link
-              href="/apply"
-              className="py-2 hover:text-[hsl(var(--instantly-orange))] transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Apply
+              Find Services
             </Link>
             <Link
               href="/live-streaming"
               className="py-2 hover:text-[hsl(var(--instantly-orange))] transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Live Streaming
+              Live Streams
             </Link>
             <Link
-              href="/contact"
+              href="/community"
               className="py-2 hover:text-[hsl(var(--instantly-orange))] transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Contact
+              Community
+            </Link>
+            <Link
+              href="/dashboard"
+              className="py-2 hover:text-[hsl(var(--instantly-orange))] transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Dashboard
+            </Link>
+            <Link
+              href="/about"
+              className="py-2 hover:text-[hsl(var(--instantly-orange))] transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              About
+            </Link>
+            <Link
+              href="/apply"
+              className="py-2 bg-[hsl(var(--instantly-orange))] text-white px-4 rounded-lg font-semibold hover:opacity-90 transition-opacity text-center"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Apply Now
             </Link>
           </nav>
         </div>

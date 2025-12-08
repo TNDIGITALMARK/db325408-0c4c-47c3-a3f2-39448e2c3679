@@ -2,8 +2,9 @@
 
 import { Header } from "@/components/instantly/header";
 import { Footer } from "@/components/instantly/footer";
-import { DollarSign, Users, Clock, TrendingUp, Video, MessageSquare } from "lucide-react";
+import { DollarSign, Users, Clock, TrendingUp, Video, MessageSquare, User, Briefcase, BarChart3 } from "lucide-react";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function ProviderDashboard() {
   const [activeTab, setActiveTab] = useState<'overview' | 'streaming' | 'jobs'>('overview');
@@ -17,6 +18,69 @@ export default function ProviderDashboard() {
         <div className="mb-8">
           <h1 className="text-[hsl(var(--instantly-text-dark))] mb-2">Provider Dashboard</h1>
           <p className="text-[hsl(var(--instantly-text-muted))]">Welcome back, Sarah! Here's your performance overview.</p>
+        </div>
+
+        {/* Quick Navigation */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
+          <Link
+            href="/dashboard/profile"
+            className="bg-gradient-to-br from-purple-100 to-pink-100 rounded-lg p-4 instantly-card-shadow hover:shadow-lg transition-all group"
+          >
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                <User className="text-purple-600" size={20} />
+              </div>
+              <div>
+                <div className="font-semibold text-[hsl(var(--instantly-text-dark))]">Profile</div>
+                <div className="text-xs text-[hsl(var(--instantly-text-muted))]">Manage your info</div>
+              </div>
+            </div>
+          </Link>
+
+          <Link
+            href="/dashboard/jobs"
+            className="bg-gradient-to-br from-orange-100 to-red-100 rounded-lg p-4 instantly-card-shadow hover:shadow-lg transition-all group"
+          >
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                <Briefcase className="text-[hsl(var(--instantly-orange))]" size={20} />
+              </div>
+              <div>
+                <div className="font-semibold text-[hsl(var(--instantly-text-dark))]">Jobs</div>
+                <div className="text-xs text-[hsl(var(--instantly-text-muted))]">Manage deliveries</div>
+              </div>
+            </div>
+          </Link>
+
+          <Link
+            href="/dashboard/streaming"
+            className="bg-gradient-to-br from-red-100 to-pink-100 rounded-lg p-4 instantly-card-shadow hover:shadow-lg transition-all group"
+          >
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                <Video className="text-red-600" size={20} />
+              </div>
+              <div>
+                <div className="font-semibold text-[hsl(var(--instantly-text-dark))]">Streaming</div>
+                <div className="text-xs text-[hsl(var(--instantly-text-muted))]">Go live now</div>
+              </div>
+            </div>
+          </Link>
+
+          <Link
+            href="/dashboard/earnings"
+            className="bg-gradient-to-br from-green-100 to-emerald-100 rounded-lg p-4 instantly-card-shadow hover:shadow-lg transition-all group"
+          >
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                <BarChart3 className="text-green-600" size={20} />
+              </div>
+              <div>
+                <div className="font-semibold text-[hsl(var(--instantly-text-dark))]">Earnings</div>
+                <div className="text-xs text-[hsl(var(--instantly-text-muted))]">Cash out anytime</div>
+              </div>
+            </div>
+          </Link>
         </div>
 
         {/* Stats Grid */}

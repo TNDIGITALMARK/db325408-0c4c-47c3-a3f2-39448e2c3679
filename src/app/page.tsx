@@ -153,6 +153,199 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Platform Features */}
+      <section className="bg-white py-20">
+        <div className="instantly-container">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-[hsl(var(--instantly-text-dark))] mb-4">
+              Explore the Platform
+            </h2>
+            <p className="text-lg text-[hsl(var(--instantly-text-muted))] leading-relaxed">
+              Discover all the features designed to empower your independent business
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Provider Dashboard */}
+            <Link
+              href="/dashboard"
+              className="group bg-gradient-to-br from-[hsl(var(--instantly-feature-blue))] to-[hsl(var(--instantly-feature-green))] rounded-xl p-8 instantly-card-shadow hover:shadow-2xl transition-all transform hover:scale-105"
+            >
+              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" className="text-[hsl(var(--instantly-navy))]">
+                  <rect x="3" y="3" width="7" height="7" rx="1" stroke="currentColor" strokeWidth="2"/>
+                  <rect x="14" y="3" width="7" height="7" rx="1" stroke="currentColor" strokeWidth="2"/>
+                  <rect x="3" y="14" width="7" height="7" rx="1" stroke="currentColor" strokeWidth="2"/>
+                  <rect x="14" y="14" width="7" height="7" rx="1" stroke="currentColor" strokeWidth="2"/>
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-[hsl(var(--instantly-text-dark))] mb-2 group-hover:text-[hsl(var(--instantly-navy))] transition-colors">
+                Provider Dashboard
+              </h3>
+              <p className="text-[hsl(var(--instantly-text-dark))]">
+                Track earnings, manage jobs, view analytics, and control your business
+              </p>
+            </Link>
+
+            {/* Profile Management */}
+            <Link
+              href="/dashboard/profile"
+              className="group bg-gradient-to-br from-purple-100 to-pink-100 rounded-xl p-8 instantly-card-shadow hover:shadow-2xl transition-all transform hover:scale-105"
+            >
+              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" className="text-purple-600">
+                  <circle cx="12" cy="8" r="4" stroke="currentColor" strokeWidth="2"/>
+                  <path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-[hsl(var(--instantly-text-dark))] mb-2 group-hover:text-purple-600 transition-colors">
+                Profile Management
+              </h3>
+              <p className="text-[hsl(var(--instantly-text-dark))]">
+                Build your profile with skills, certifications, portfolio, and pricing
+              </p>
+            </Link>
+
+            {/* Job Management */}
+            <Link
+              href="/dashboard/jobs"
+              className="group bg-gradient-to-br from-orange-100 to-red-100 rounded-xl p-8 instantly-card-shadow hover:shadow-2xl transition-all transform hover:scale-105"
+            >
+              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" className="text-[hsl(var(--instantly-orange))]">
+                  <rect x="3" y="7" width="18" height="13" rx="2" stroke="currentColor" strokeWidth="2"/>
+                  <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" stroke="currentColor" strokeWidth="2"/>
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-[hsl(var(--instantly-text-dark))] mb-2 group-hover:text-[hsl(var(--instantly-orange))] transition-colors">
+                Job Management
+              </h3>
+              <p className="text-[hsl(var(--instantly-text-dark))]">
+                Accept jobs, track deliveries with GPS, and manage your workload
+              </p>
+            </Link>
+
+            {/* Earnings Dashboard */}
+            <Link
+              href="/dashboard/earnings"
+              className="group bg-gradient-to-br from-green-100 to-emerald-100 rounded-xl p-8 instantly-card-shadow hover:shadow-2xl transition-all transform hover:scale-105"
+            >
+              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" className="text-green-600">
+                  <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="2"/>
+                  <path d="M12 6v6l4 2" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-[hsl(var(--instantly-text-dark))] mb-2 group-hover:text-green-600 transition-colors">
+                Earnings & Payouts
+              </h3>
+              <p className="text-[hsl(var(--instantly-text-dark))]">
+                Cash out instantly, track transactions, and manage payment methods
+              </p>
+            </Link>
+
+            {/* Streaming Studio */}
+            <Link
+              href="/dashboard/streaming"
+              className="group bg-gradient-to-br from-red-100 to-pink-100 rounded-xl p-8 instantly-card-shadow hover:shadow-2xl transition-all transform hover:scale-105"
+            >
+              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" className="text-red-600">
+                  <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
+                  <polygon points="10,8 16,12 10,16" fill="currentColor"/>
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-[hsl(var(--instantly-text-dark))] mb-2 group-hover:text-red-600 transition-colors">
+                Streaming Studio
+              </h3>
+              <p className="text-[hsl(var(--instantly-text-dark))]">
+                Go live, share your expertise, earn tips, and build your audience
+              </p>
+            </Link>
+
+            {/* Community Hub */}
+            <Link
+              href="/community"
+              className="group bg-gradient-to-br from-yellow-100 to-orange-100 rounded-xl p-8 instantly-card-shadow hover:shadow-2xl transition-all transform hover:scale-105"
+            >
+              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" className="text-yellow-600">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" strokeWidth="2"/>
+                  <circle cx="9" cy="7" r="4" stroke="currentColor" strokeWidth="2"/>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-[hsl(var(--instantly-text-dark))] mb-2 group-hover:text-yellow-600 transition-colors">
+                Community Hub
+              </h3>
+              <p className="text-[hsl(var(--instantly-text-dark))]">
+                Join leaderboards, discussions, events, and connect with providers
+              </p>
+            </Link>
+
+            {/* Find Services */}
+            <Link
+              href="/services"
+              className="group bg-gradient-to-br from-blue-100 to-cyan-100 rounded-xl p-8 instantly-card-shadow hover:shadow-2xl transition-all transform hover:scale-105"
+            >
+              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" className="text-blue-600">
+                  <circle cx="11" cy="11" r="8" stroke="currentColor" strokeWidth="2"/>
+                  <path d="m21 21-4.35-4.35" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-[hsl(var(--instantly-text-dark))] mb-2 group-hover:text-blue-600 transition-colors">
+                Find Services
+              </h3>
+              <p className="text-[hsl(var(--instantly-text-dark))]">
+                Browse providers by category, rating, location, and availability
+              </p>
+            </Link>
+
+            {/* Live Streams */}
+            <Link
+              href="/live-streaming"
+              className="group bg-gradient-to-br from-pink-100 to-purple-100 rounded-xl p-8 instantly-card-shadow hover:shadow-2xl transition-all transform hover:scale-105"
+            >
+              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" className="text-pink-600">
+                  <rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" strokeWidth="2"/>
+                  <path d="M8 21h8" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                  <path d="M12 17v4" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-[hsl(var(--instantly-text-dark))] mb-2 group-hover:text-pink-600 transition-colors">
+                Watch Live Streams
+              </h3>
+              <p className="text-[hsl(var(--instantly-text-dark))]">
+                Watch providers showcase their skills and learn from experts
+              </p>
+            </Link>
+
+            {/* About */}
+            <Link
+              href="/about"
+              className="group bg-gradient-to-br from-indigo-100 to-blue-100 rounded-xl p-8 instantly-card-shadow hover:shadow-2xl transition-all transform hover:scale-105"
+            >
+              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" className="text-indigo-600">
+                  <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
+                  <path d="M12 16v-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                  <circle cx="12" cy="8" r="0.5" fill="currentColor" stroke="currentColor" strokeWidth="1"/>
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-[hsl(var(--instantly-text-dark))] mb-2 group-hover:text-indigo-600 transition-colors">
+                About Instantly
+              </h3>
+              <p className="text-[hsl(var(--instantly-text-dark))]">
+                Learn about our mission, values, and commitment to providers
+              </p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Join Network Section */}
       <section className="bg-white py-20 relative overflow-hidden">
         {/* Background Pattern */}
