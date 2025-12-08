@@ -2,7 +2,7 @@
 
 import { Header } from "@/components/instantly/header";
 import { Footer } from "@/components/instantly/footer";
-import { DollarSign, TrendingUp, Download, CreditCard, Building, Smartphone, Calendar, Filter, ArrowUpRight, ArrowDownRight } from "lucide-react";
+import { DollarSign, TrendingUp, Download, CreditCard, Building, Smartphone, Calendar, Filter, ArrowUpRight, ArrowDownRight, FileText } from "lucide-react";
 import { useState } from "react";
 
 export default function EarningsPage() {
