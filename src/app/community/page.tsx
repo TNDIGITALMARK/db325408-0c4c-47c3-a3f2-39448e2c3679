@@ -86,47 +86,47 @@ export default function CommunityPage() {
     <div className="min-h-screen flex flex-col bg-[hsl(var(--instantly-bg-light))]">
       <Header />
 
-      <div className="instantly-container py-8">
+      <div className="instantly-container py-6 md:py-8">
         {/* Header */}
-        <div className="mb-8">
+        <div className="mb-6 md:mb-8 text-center lg:text-left">
           <h1 className="text-[hsl(var(--instantly-text-dark))] mb-2">Community Hub</h1>
-          <p className="text-[hsl(var(--instantly-text-muted))]">
+          <p className="text-sm md:text-base text-[hsl(var(--instantly-text-muted))]">
             Connect with fellow providers, share knowledge, and celebrate success together
           </p>
         </div>
 
         {/* Community Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-          <div className="bg-gradient-to-br from-[hsl(var(--instantly-orange))] to-[hsl(var(--instantly-navy))] text-white rounded-xl p-6 instantly-card-shadow">
-            <Users className="mb-3" size={24} />
-            <div className="text-3xl font-bold mb-1">10,247</div>
-            <div className="text-sm opacity-90">Active Providers</div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 mb-6 md:mb-8">
+          <div className="bg-gradient-to-br from-[hsl(var(--instantly-orange))] to-[hsl(var(--instantly-navy))] text-white rounded-xl p-4 md:p-6 instantly-card-shadow col-span-2 md:col-span-1">
+            <Users className="mb-2 md:mb-3" size={20} />
+            <div className="text-2xl md:text-3xl font-bold mb-1">10,247</div>
+            <div className="text-xs md:text-sm opacity-90">Active Providers</div>
           </div>
 
-          <div className="bg-white rounded-xl p-6 instantly-card-shadow">
-            <MessageSquare className="text-[hsl(var(--instantly-feature-blue))] mb-3" size={24} />
-            <div className="text-3xl font-bold text-[hsl(var(--instantly-text-dark))] mb-1">1,842</div>
-            <div className="text-sm text-[hsl(var(--instantly-text-muted))]">Discussions</div>
+          <div className="bg-white rounded-xl p-4 md:p-6 instantly-card-shadow">
+            <MessageSquare className="text-[hsl(var(--instantly-feature-blue))] mb-2 md:mb-3" size={20} />
+            <div className="text-2xl md:text-3xl font-bold text-[hsl(var(--instantly-text-dark))] mb-1">1,842</div>
+            <div className="text-xs md:text-sm text-[hsl(var(--instantly-text-muted))]">Discussions</div>
           </div>
 
-          <div className="bg-white rounded-xl p-6 instantly-card-shadow">
-            <Calendar className="text-[hsl(var(--instantly-feature-green))] mb-3" size={24} />
-            <div className="text-3xl font-bold text-[hsl(var(--instantly-text-dark))] mb-1">24</div>
-            <div className="text-sm text-[hsl(var(--instantly-text-muted))]">Upcoming Events</div>
+          <div className="bg-white rounded-xl p-4 md:p-6 instantly-card-shadow">
+            <Calendar className="text-[hsl(var(--instantly-feature-green))] mb-2 md:mb-3" size={20} />
+            <div className="text-2xl md:text-3xl font-bold text-[hsl(var(--instantly-text-dark))] mb-1">24</div>
+            <div className="text-xs md:text-sm text-[hsl(var(--instantly-text-muted))]">Upcoming Events</div>
           </div>
 
-          <div className="bg-white rounded-xl p-6 instantly-card-shadow">
-            <Award className="text-[hsl(var(--instantly-orange))] mb-3" size={24} />
-            <div className="text-3xl font-bold text-[hsl(var(--instantly-text-dark))] mb-1">5.2M</div>
-            <div className="text-sm text-[hsl(var(--instantly-text-muted))]">Total Earnings</div>
+          <div className="bg-white rounded-xl p-4 md:p-6 instantly-card-shadow">
+            <Award className="text-[hsl(var(--instantly-orange))] mb-2 md:mb-3" size={20} />
+            <div className="text-2xl md:text-3xl font-bold text-[hsl(var(--instantly-text-dark))] mb-1">5.2M</div>
+            <div className="text-xs md:text-sm text-[hsl(var(--instantly-text-muted))]">Total Earnings</div>
           </div>
         </div>
 
         {/* Tabs */}
-        <div className="flex gap-4 mb-6 border-b border-gray-200">
+        <div className="flex gap-3 md:gap-4 mb-4 md:mb-6 border-b border-gray-200 overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0">
           <button
             onClick={() => setActiveTab('leaderboard')}
-            className={`pb-4 px-2 font-semibold transition-colors ${
+            className={`pb-3 md:pb-4 px-2 text-sm md:text-base font-semibold whitespace-nowrap transition-colors ${
               activeTab === 'leaderboard'
                 ? 'text-[hsl(var(--instantly-navy))] border-b-2 border-[hsl(var(--instantly-navy))]'
                 : 'text-[hsl(var(--instantly-text-muted))] hover:text-[hsl(var(--instantly-text-dark))]'
@@ -136,7 +136,7 @@ export default function CommunityPage() {
           </button>
           <button
             onClick={() => setActiveTab('discussions')}
-            className={`pb-4 px-2 font-semibold transition-colors ${
+            className={`pb-3 md:pb-4 px-2 text-sm md:text-base font-semibold whitespace-nowrap transition-colors ${
               activeTab === 'discussions'
                 ? 'text-[hsl(var(--instantly-navy))] border-b-2 border-[hsl(var(--instantly-navy))]'
                 : 'text-[hsl(var(--instantly-text-muted))] hover:text-[hsl(var(--instantly-text-dark))]'
@@ -146,7 +146,7 @@ export default function CommunityPage() {
           </button>
           <button
             onClick={() => setActiveTab('events')}
-            className={`pb-4 px-2 font-semibold transition-colors ${
+            className={`pb-3 md:pb-4 px-2 text-sm md:text-base font-semibold whitespace-nowrap transition-colors ${
               activeTab === 'events'
                 ? 'text-[hsl(var(--instantly-navy))] border-b-2 border-[hsl(var(--instantly-navy))]'
                 : 'text-[hsl(var(--instantly-text-muted))] hover:text-[hsl(var(--instantly-text-dark))]'
@@ -158,10 +158,10 @@ export default function CommunityPage() {
 
         {/* Leaderboard Tab */}
         {activeTab === 'leaderboard' && (
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6">
             {/* Top 3 Podium */}
-            <div className="lg:col-span-3 mb-6">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="lg:col-span-3 mb-4 md:mb-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
                 {topProviders.slice(0, 3).map((provider, index) => {
                   const positions = [2, 1, 3]; // Center the #1
                   const colors = ['#C0C0C0', '#FFD700', '#CD7F32'];
@@ -213,12 +213,12 @@ export default function CommunityPage() {
             </div>
 
             {/* Full Leaderboard */}
-            <div className="lg:col-span-2 bg-white rounded-xl p-6 instantly-card-shadow">
-              <h3 className="text-[hsl(var(--instantly-text-dark))] mb-6 flex items-center gap-2">
-                <Trophy size={20} className="text-[hsl(var(--instantly-orange))]" />
+            <div className="lg:col-span-2 bg-white rounded-xl p-4 md:p-6 instantly-card-shadow">
+              <h3 className="text-base md:text-lg text-[hsl(var(--instantly-text-dark))] mb-4 md:mb-6 flex items-center gap-2 font-bold">
+                <Trophy size={18} className="md:w-5 md:h-5 text-[hsl(var(--instantly-orange))]" />
                 Top Providers This Month
               </h3>
-              <div className="space-y-3">
+              <div className="space-y-2 md:space-y-3">
                 {topProviders.map((provider) => (
                   <div
                     key={provider.rank}
@@ -261,9 +261,9 @@ export default function CommunityPage() {
             </div>
 
             {/* Achievements */}
-            <div className="bg-white rounded-xl p-6 instantly-card-shadow">
-              <h3 className="text-[hsl(var(--instantly-text-dark))] mb-6">Achievements</h3>
-              <div className="space-y-4">
+            <div className="bg-white rounded-xl p-4 md:p-6 instantly-card-shadow">
+              <h3 className="text-base md:text-lg text-[hsl(var(--instantly-text-dark))] mb-4 md:mb-6 font-bold">Achievements</h3>
+              <div className="space-y-3 md:space-y-4">
                 {[
                   { icon: "🏆", name: "Top Earner", desc: "Top 10 this month", color: "bg-yellow-100" },
                   { icon: "⭐", name: "5-Star Pro", desc: "100+ perfect ratings", color: "bg-blue-100" },
@@ -292,16 +292,16 @@ export default function CommunityPage() {
 
         {/* Discussions Tab */}
         {activeTab === 'discussions' && (
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <div className="lg:col-span-2 space-y-4">
-              <button className="w-full bg-[hsl(var(--instantly-orange))] text-white py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6">
+            <div className="lg:col-span-2 space-y-3 md:space-y-4">
+              <button className="w-full bg-[hsl(var(--instantly-orange))] text-white py-2.5 md:py-3 text-sm md:text-base rounded-lg font-semibold hover:opacity-90 transition-opacity">
                 + Start New Discussion
               </button>
 
               {discussions.map((discussion) => (
                 <div
                   key={discussion.id}
-                  className="bg-white rounded-xl p-6 instantly-card-shadow hover:shadow-lg transition-shadow cursor-pointer"
+                  className="bg-white rounded-xl p-4 md:p-6 instantly-card-shadow hover:shadow-lg transition-shadow cursor-pointer"
                 >
                   <div className="flex items-start gap-4">
                     <div className="text-4xl">{discussion.avatar}</div>
@@ -339,13 +339,13 @@ export default function CommunityPage() {
             </div>
 
             {/* Trending Topics */}
-            <div className="space-y-6">
-              <div className="bg-white rounded-xl p-6 instantly-card-shadow">
-                <h3 className="text-[hsl(var(--instantly-text-dark))] mb-4 flex items-center gap-2">
-                  <TrendingUp size={20} />
+            <div className="space-y-4 md:space-y-6">
+              <div className="bg-white rounded-xl p-5 md:p-6 instantly-card-shadow">
+                <h3 className="text-base md:text-lg text-[hsl(var(--instantly-text-dark))] mb-3 md:mb-4 flex items-center gap-2 font-bold">
+                  <TrendingUp size={18} className="md:w-5 md:h-5" />
                   Trending Topics
                 </h3>
-                <div className="space-y-3">
+                <div className="space-y-2 md:space-y-3">
                   {['#StreamingTips', '#TaxAdvice', '#SafetyFirst', '#CustomerService', '#EarningGoals'].map((tag, i) => (
                     <button
                       key={i}
@@ -362,9 +362,9 @@ export default function CommunityPage() {
 
         {/* Events Tab */}
         {activeTab === 'events' && (
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
             {upcomingEvents.map((event) => (
-              <div key={event.id} className="bg-white rounded-xl p-6 instantly-card-shadow">
+              <div key={event.id} className="bg-white rounded-xl p-5 md:p-6 instantly-card-shadow">
                 <div className="flex items-start justify-between mb-4">
                   <div>
                     <h3 className="text-xl font-bold text-[hsl(var(--instantly-text-dark))] mb-2">

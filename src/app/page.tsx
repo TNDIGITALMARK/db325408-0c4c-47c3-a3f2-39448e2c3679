@@ -14,25 +14,25 @@ export default function Home() {
       <Header />
 
       {/* Hero Section */}
-      <section className="bg-white py-20 relative overflow-hidden">
+      <section className="bg-white py-12 md:py-20 relative overflow-hidden">
         {/* Decorative circles */}
         <div className="absolute top-20 right-10 w-64 h-64 bg-[hsl(var(--instantly-feature-blue))] rounded-full opacity-20 blur-3xl"></div>
         <div className="absolute bottom-20 left-10 w-48 h-48 bg-[hsl(var(--instantly-feature-green))] rounded-full opacity-20 blur-3xl"></div>
 
         <div className="instantly-container relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
             {/* Left: Hero Text */}
-            <div>
-              <h1 className="text-[hsl(var(--instantly-navy))] mb-6">
+            <div className="text-center lg:text-left">
+              <h1 className="text-[hsl(var(--instantly-navy))] mb-4 md:mb-6">
                 Empowering Independent Service Providers
               </h1>
-              <p className="text-lg text-[hsl(var(--instantly-text-muted))] mb-8 leading-relaxed">
+              <p className="text-base md:text-lg text-[hsl(var(--instantly-text-muted))] mb-6 md:mb-8 leading-relaxed">
                 Join our community of independent contractors offering live streaming services and instant local delivery.
                 Take control of your work, schedule, and earnings with complete freedom and flexibility.
               </p>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+              <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mb-6 md:mb-8">
                 <Link
                   href="/apply"
                   className="inline-flex items-center justify-center bg-[hsl(var(--instantly-orange))] text-white px-8 py-4 rounded-lg font-semibold instantly-button-hover"
@@ -48,14 +48,14 @@ export default function Home() {
               </div>
 
               {/* App Store Badges */}
-              <div className="flex flex-col sm:flex-row gap-3 items-start">
+              <div className="flex flex-col sm:flex-row gap-3 items-center lg:items-start justify-center lg:justify-start">
                 <a
                   href="https://play.google.com/store"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-black text-white px-5 py-3 rounded-lg hover:opacity-80 transition-opacity"
+                  className="inline-flex items-center gap-2 bg-black text-white px-4 md:px-5 py-2.5 md:py-3 rounded-lg hover:opacity-80 transition-opacity w-full sm:w-auto justify-center"
                 >
-                  <Smartphone size={20} />
+                  <Smartphone size={18} className="md:w-5 md:h-5" />
                   <div className="text-left">
                     <div className="text-xs">GET IT ON</div>
                     <div className="text-sm font-semibold">Google Play</div>
@@ -65,9 +65,9 @@ export default function Home() {
                   href="https://www.apple.com/app-store/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-black text-white px-5 py-3 rounded-lg hover:opacity-80 transition-opacity"
+                  className="inline-flex items-center gap-2 bg-black text-white px-4 md:px-5 py-2.5 md:py-3 rounded-lg hover:opacity-80 transition-opacity w-full sm:w-auto justify-center"
                 >
-                  <Smartphone size={20} />
+                  <Smartphone size={18} className="md:w-5 md:h-5" />
                   <div className="text-left">
                     <div className="text-xs">Download on the</div>
                     <div className="text-sm font-semibold">App Store</div>
@@ -77,7 +77,7 @@ export default function Home() {
             </div>
 
             {/* Right: Hero Image */}
-            <div className="relative instantly-image-float">
+            <div className="relative instantly-image-float mt-8 lg:mt-0">
               <div className="instantly-gradient-overlay rounded-2xl overflow-hidden instantly-card-shadow">
                 <Image
                   src="/generated/hero-providers.png"
@@ -89,7 +89,7 @@ export default function Home() {
                 />
               </div>
               {/* Floating service icons */}
-              <div className="absolute -top-4 -right-4 w-24 h-24 bg-white rounded-2xl shadow-lg p-4 instantly-card-shadow">
+              <div className="absolute -top-2 -right-2 md:-top-4 md:-right-4 w-16 h-16 md:w-24 md:h-24 bg-white rounded-xl md:rounded-2xl shadow-lg p-2 md:p-4 instantly-card-shadow">
                 <Image
                   src="/generated/service-handy.png"
                   alt="Handyman services"
@@ -98,7 +98,7 @@ export default function Home() {
                   className="w-full h-full object-contain"
                 />
               </div>
-              <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-white rounded-2xl shadow-lg p-4 instantly-card-shadow">
+              <div className="absolute -bottom-2 -left-2 md:-bottom-4 md:-left-4 w-16 h-16 md:w-24 md:h-24 bg-white rounded-xl md:rounded-2xl shadow-lg p-2 md:p-4 instantly-card-shadow">
                 <Image
                   src="/generated/service-food.png"
                   alt="Food delivery services"
@@ -113,9 +113,9 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="bg-[hsl(var(--instantly-bg-light))] py-20 relative">
+      <section className="bg-[hsl(var(--instantly-bg-light))] py-12 md:py-20 relative">
         {/* Section Header */}
-        <div className="instantly-container mb-12">
+        <div className="instantly-container mb-8 md:mb-12">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-[hsl(var(--instantly-text-dark))] mb-4">
               Everything You Need to Succeed
@@ -127,7 +127,7 @@ export default function Home() {
         </div>
 
         <div className="instantly-container">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
             <FeatureCard
               icon={<Camera className="text-[hsl(var(--instantly-navy))]" size={32} />}
               title="Live Stream Services"
@@ -154,9 +154,9 @@ export default function Home() {
       </section>
 
       {/* Platform Features */}
-      <section className="bg-white py-20">
+      <section className="bg-white py-12 md:py-20">
         <div className="instantly-container">
-          <div className="text-center max-w-3xl mx-auto mb-12">
+          <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12">
             <h2 className="text-[hsl(var(--instantly-text-dark))] mb-4">
               Explore the Platform
             </h2>
@@ -165,13 +165,13 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {/* Provider Dashboard */}
             <Link
               href="/dashboard"
-              className="group bg-gradient-to-br from-[hsl(var(--instantly-feature-blue))] to-[hsl(var(--instantly-feature-green))] rounded-xl p-8 instantly-card-shadow hover:shadow-2xl transition-all transform hover:scale-105"
+              className="group bg-gradient-to-br from-[hsl(var(--instantly-feature-blue))] to-[hsl(var(--instantly-feature-green))] rounded-xl p-6 md:p-8 instantly-card-shadow hover:shadow-2xl transition-all transform hover:scale-105"
             >
-              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4">
+              <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-full flex items-center justify-center mb-3 md:mb-4">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" className="text-[hsl(var(--instantly-navy))]">
                   <rect x="3" y="3" width="7" height="7" rx="1" stroke="currentColor" strokeWidth="2"/>
                   <rect x="14" y="3" width="7" height="7" rx="1" stroke="currentColor" strokeWidth="2"/>
@@ -179,10 +179,10 @@ export default function Home() {
                   <rect x="14" y="14" width="7" height="7" rx="1" stroke="currentColor" strokeWidth="2"/>
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-[hsl(var(--instantly-text-dark))] mb-2 group-hover:text-[hsl(var(--instantly-navy))] transition-colors">
+              <h3 className="text-lg md:text-xl font-bold text-[hsl(var(--instantly-text-dark))] mb-2 group-hover:text-[hsl(var(--instantly-navy))] transition-colors">
                 Provider Dashboard
               </h3>
-              <p className="text-[hsl(var(--instantly-text-dark))]">
+              <p className="text-sm md:text-base text-[hsl(var(--instantly-text-dark))]">
                 Track earnings, manage jobs, view analytics, and control your business
               </p>
             </Link>
@@ -190,18 +190,18 @@ export default function Home() {
             {/* Profile Management */}
             <Link
               href="/dashboard/profile"
-              className="group bg-gradient-to-br from-purple-100 to-pink-100 rounded-xl p-8 instantly-card-shadow hover:shadow-2xl transition-all transform hover:scale-105"
+              className="group bg-gradient-to-br from-purple-100 to-pink-100 rounded-xl p-6 md:p-8 instantly-card-shadow hover:shadow-2xl transition-all transform hover:scale-105"
             >
-              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4">
+              <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-full flex items-center justify-center mb-3 md:mb-4">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" className="text-purple-600">
                   <circle cx="12" cy="8" r="4" stroke="currentColor" strokeWidth="2"/>
                   <path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-[hsl(var(--instantly-text-dark))] mb-2 group-hover:text-purple-600 transition-colors">
+              <h3 className="text-lg md:text-xl font-bold text-[hsl(var(--instantly-text-dark))] mb-2 group-hover:text-purple-600 transition-colors">
                 Profile Management
               </h3>
-              <p className="text-[hsl(var(--instantly-text-dark))]">
+              <p className="text-sm md:text-base text-[hsl(var(--instantly-text-dark))]">
                 Build your profile with skills, certifications, portfolio, and pricing
               </p>
             </Link>
@@ -209,9 +209,9 @@ export default function Home() {
             {/* Job Management */}
             <Link
               href="/dashboard/jobs"
-              className="group bg-gradient-to-br from-orange-100 to-red-100 rounded-xl p-8 instantly-card-shadow hover:shadow-2xl transition-all transform hover:scale-105"
+              className="group bg-gradient-to-br from-orange-100 to-red-100 rounded-xl p-6 md:p-8 instantly-card-shadow hover:shadow-2xl transition-all transform hover:scale-105"
             >
-              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4">
+              <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-full flex items-center justify-center mb-3 md:mb-4">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" className="text-[hsl(var(--instantly-orange))]">
                   <rect x="3" y="7" width="18" height="13" rx="2" stroke="currentColor" strokeWidth="2"/>
                   <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" stroke="currentColor" strokeWidth="2"/>
@@ -228,9 +228,9 @@ export default function Home() {
             {/* Earnings Dashboard */}
             <Link
               href="/dashboard/earnings"
-              className="group bg-gradient-to-br from-green-100 to-emerald-100 rounded-xl p-8 instantly-card-shadow hover:shadow-2xl transition-all transform hover:scale-105"
+              className="group bg-gradient-to-br from-green-100 to-emerald-100 rounded-xl p-6 md:p-8 instantly-card-shadow hover:shadow-2xl transition-all transform hover:scale-105"
             >
-              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4">
+              <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-full flex items-center justify-center mb-3 md:mb-4">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" className="text-green-600">
                   <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="2"/>
                   <path d="M12 6v6l4 2" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
@@ -247,9 +247,9 @@ export default function Home() {
             {/* Streaming Studio */}
             <Link
               href="/dashboard/streaming"
-              className="group bg-gradient-to-br from-red-100 to-pink-100 rounded-xl p-8 instantly-card-shadow hover:shadow-2xl transition-all transform hover:scale-105"
+              className="group bg-gradient-to-br from-red-100 to-pink-100 rounded-xl p-6 md:p-8 instantly-card-shadow hover:shadow-2xl transition-all transform hover:scale-105"
             >
-              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4">
+              <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-full flex items-center justify-center mb-3 md:mb-4">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" className="text-red-600">
                   <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
                   <polygon points="10,8 16,12 10,16" fill="currentColor"/>
@@ -266,9 +266,9 @@ export default function Home() {
             {/* Community Hub */}
             <Link
               href="/community"
-              className="group bg-gradient-to-br from-yellow-100 to-orange-100 rounded-xl p-8 instantly-card-shadow hover:shadow-2xl transition-all transform hover:scale-105"
+              className="group bg-gradient-to-br from-yellow-100 to-orange-100 rounded-xl p-6 md:p-8 instantly-card-shadow hover:shadow-2xl transition-all transform hover:scale-105"
             >
-              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4">
+              <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-full flex items-center justify-center mb-3 md:mb-4">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" className="text-yellow-600">
                   <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" strokeWidth="2"/>
                   <circle cx="9" cy="7" r="4" stroke="currentColor" strokeWidth="2"/>
@@ -287,9 +287,9 @@ export default function Home() {
             {/* Find Services */}
             <Link
               href="/services"
-              className="group bg-gradient-to-br from-blue-100 to-cyan-100 rounded-xl p-8 instantly-card-shadow hover:shadow-2xl transition-all transform hover:scale-105"
+              className="group bg-gradient-to-br from-blue-100 to-cyan-100 rounded-xl p-6 md:p-8 instantly-card-shadow hover:shadow-2xl transition-all transform hover:scale-105"
             >
-              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4">
+              <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-full flex items-center justify-center mb-3 md:mb-4">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" className="text-blue-600">
                   <circle cx="11" cy="11" r="8" stroke="currentColor" strokeWidth="2"/>
                   <path d="m21 21-4.35-4.35" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
@@ -306,9 +306,9 @@ export default function Home() {
             {/* Live Streams */}
             <Link
               href="/live-streaming"
-              className="group bg-gradient-to-br from-pink-100 to-purple-100 rounded-xl p-8 instantly-card-shadow hover:shadow-2xl transition-all transform hover:scale-105"
+              className="group bg-gradient-to-br from-pink-100 to-purple-100 rounded-xl p-6 md:p-8 instantly-card-shadow hover:shadow-2xl transition-all transform hover:scale-105"
             >
-              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4">
+              <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-full flex items-center justify-center mb-3 md:mb-4">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" className="text-pink-600">
                   <rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" strokeWidth="2"/>
                   <path d="M8 21h8" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
@@ -326,9 +326,9 @@ export default function Home() {
             {/* About */}
             <Link
               href="/about"
-              className="group bg-gradient-to-br from-indigo-100 to-blue-100 rounded-xl p-8 instantly-card-shadow hover:shadow-2xl transition-all transform hover:scale-105"
+              className="group bg-gradient-to-br from-indigo-100 to-blue-100 rounded-xl p-6 md:p-8 instantly-card-shadow hover:shadow-2xl transition-all transform hover:scale-105"
             >
-              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4">
+              <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-full flex items-center justify-center mb-3 md:mb-4">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" className="text-indigo-600">
                   <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
                   <path d="M12 16v-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
@@ -347,7 +347,7 @@ export default function Home() {
       </section>
 
       {/* Join Network Section */}
-      <section className="bg-white py-20 relative overflow-hidden">
+      <section className="bg-white py-12 md:py-20 relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
           <Image
@@ -359,9 +359,9 @@ export default function Home() {
         </div>
 
         <div className="instantly-container relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
             {/* Left: Text */}
-            <div>
+            <div className="text-center lg:text-left">
               <h2 className="text-[hsl(var(--instantly-text-dark))] mb-6">
                 Join Our Growing Network
               </h2>
@@ -410,7 +410,7 @@ export default function Home() {
             </div>
 
             {/* Right: Community Image */}
-            <div className="relative">
+            <div className="relative mt-8 lg:mt-0">
               <div className="rounded-2xl overflow-hidden instantly-card-shadow">
                 <Image
                   src="/generated/community-providers.png"
@@ -428,11 +428,11 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="bg-gradient-to-br from-[hsl(var(--instantly-feature-blue))] to-[hsl(var(--instantly-feature-green))] py-20">
+      <section className="bg-gradient-to-br from-[hsl(var(--instantly-feature-blue))] to-[hsl(var(--instantly-feature-green))] py-12 md:py-20">
         <div className="instantly-container">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
             {/* Stat 1 */}
-            <div className="bg-white rounded-2xl p-8 instantly-card-shadow text-center">
+            <div className="bg-white rounded-2xl p-6 md:p-8 instantly-card-shadow text-center">
               <div className="w-20 h-20 mx-auto mb-4 relative">
                 <Image
                   src="/generated/success-metrics.png"
@@ -447,7 +447,7 @@ export default function Home() {
             </div>
 
             {/* Stat 2 */}
-            <div className="bg-white rounded-2xl p-8 instantly-card-shadow text-center">
+            <div className="bg-white rounded-2xl p-6 md:p-8 instantly-card-shadow text-center">
               <div className="w-20 h-20 mx-auto mb-4 relative">
                 <Image
                   src="/generated/instant-earnings.png"
@@ -462,7 +462,7 @@ export default function Home() {
             </div>
 
             {/* Stat 3 */}
-            <div className="bg-white rounded-2xl p-8 instantly-card-shadow text-center">
+            <div className="bg-white rounded-2xl p-6 md:p-8 instantly-card-shadow text-center">
               <div className="w-20 h-20 mx-auto mb-4 relative">
                 <Image
                   src="/generated/service-tech.png"
@@ -480,7 +480,7 @@ export default function Home() {
       </section>
 
       {/* Mission Statement */}
-      <section className="bg-[hsl(var(--instantly-navy))] text-white py-20 relative overflow-hidden">
+      <section className="bg-[hsl(var(--instantly-navy))] text-white py-12 md:py-20 relative overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0 opacity-10">
           <Image

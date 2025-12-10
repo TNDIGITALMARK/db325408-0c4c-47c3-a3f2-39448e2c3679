@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 /* ============================================
    INSTANTLY INC. DESIGN SYSTEM
@@ -328,16 +327,139 @@ button {
   color: white !important;
 }
 
-@media (max-width: 768px) {
+/* ============================================
+   MOBILE RESPONSIVE BREAKPOINTS
+   ============================================ */
+
+/* Small devices (phones, up to 640px) */
+@media (max-width: 640px) {
   h1 {
-    font-size: 2.25rem;  /* 36px on mobile */
+    font-size: 2rem;  /* 32px on small mobile */
+    line-height: 1.2;
   }
 
   h2 {
-    font-size: 1.75rem;  /* 28px on mobile */
+    font-size: 1.5rem;  /* 24px on small mobile */
+    line-height: 1.3;
+  }
+
+  h3 {
+    font-size: 1.125rem;  /* 18px on small mobile */
   }
 
   .instantly-container {
     padding: 0 1rem;
   }
+
+  /* Button adjustments */
+  button, .button, a.button {
+    font-size: 0.9375rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  /* Reduce excessive padding/margins */
+  section {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  /* Better touch targets */
+  button, a, input, select, textarea {
+    min-height: 44px;
+  }
+
+  /* Stack cards on mobile */
+  .instantly-card-shadow {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Medium devices (tablets, 641px to 768px) */
+@media (min-width: 641px) and (max-width: 768px) {
+  h1 {
+    font-size: 2.25rem;  /* 36px on tablet */
+  }
+
+  h2 {
+    font-size: 1.75rem;  /* 28px on tablet */
+  }
+
+  .instantly-container {
+    padding: 0 1.5rem;
+  }
+}
+
+/* Medium to large devices (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .instantly-container {
+    padding: 0 1.5rem;
+  }
+}
+
+/* Mobile-specific utilities */
+@media (max-width: 768px) {
+  /* Hide on mobile */
+  .mobile-hidden {
+    display: none !important;
+  }
+
+  /* Show only on mobile */
+  .mobile-only {
+    display: block !important;
+  }
+
+  /* Full width on mobile */
+  .mobile-full-width {
+    width: 100% !important;
+  }
+
+  /* Smaller gaps on mobile */
+  .mobile-gap-small {
+    gap: 0.75rem !important;
+  }
+
+  /* Better image sizing */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Prevent horizontal scroll */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Better form inputs */
+  input, select, textarea {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  /* Sticky elements adjustment */
+  .sticky {
+    position: relative !important;
+  }
+}
+
+/* ============================================
+   LIVEKIT COMPONENT STYLES
+   ============================================ */
+
+.lk-video-conference {
+  height: 100%;
+  width: 100%;
+  background-color: hsl(var(--instantly-navy));
+}
+
+.lk-grid-layout {
+  background-color: hsl(var(--instantly-navy));
+}
+
+.lk-participant-tile {
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.lk-focus-layout {
+  background-color: hsl(var(--instantly-navy));
 }
